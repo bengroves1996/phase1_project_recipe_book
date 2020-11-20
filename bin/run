@@ -2,36 +2,8 @@
 
 require_relative '../environment.rb' 
 
-check = true
-cli = Cli.new
 
-while check == true
-    cli.greeting
-    input_first = gets.chomp
-    cli.ask(input_first)[0]
-    api = Api.new(cli.ask(input_first)[0], cli.ask(input_first)[1])
-    api.fetch_recipes
-    api.names
-    puts "Do you like the suggestions? Yes or No?"
-    input_second = gets.chomp
-    if input_second == "No" || input_second == "no"
-        puts "Would you like to try again, yes or no?"
-        input_third = gets.chomp
-        api.clear
-        if input_third == "No" || input_third == "no"
-            puts "I'm sorry I couldn't help you today."
-            check = false
-            break
-        else 
-            api.clear
-        end
-    elsif input_second == "Yes" || input_second == "yes"
-        puts "Which recipe would you like the link for?"
-        input_fourth = gets.chomp
-        api.urls_and_names(input_fourth)
-        break
-    else
-        check = true
-    end 
-end 
+cli = Cli.new
+cli.greeting
+
     
