@@ -76,7 +76,7 @@ class Cli
             end 
         end 
         
-        #Recipe_list.display_recipes
+       
 
     end
 
@@ -119,44 +119,7 @@ class Cli
         complete = string.split(" ")
     end
 
-    # check = true
-    # while check == true
-    #     cli.greeting
-    #     input_first = gets.chomp
-    #     cli.ask(input_first)[0]
-    #     api = Api.new(cli.ask(input_first)[0], cli.ask(input_first)[1]) # Move While loop to CLI
-    #     recipes = api.fetch_recipes #Set to variable
-    #     if recipes== nil
-    #         puts  "I'm sorry I couldn't find any recipes with those parameters."
-    #     else
     
-    #         for i in recipes
-    #             Book.new(recipes[i]['title'], recipes[i]'sourceUrl') #enumerbale
-    #         end 
-    #     end 
-    #     api.names
-    #     puts "Do you like the suggestions? Yes or No?" 
-    #     input_second = gets.chomp
-    #     if input_second == "No" || input_second == "no"
-    #         puts "Would you like to try again, yes or no?"
-    #         input_third = gets.chomp
-    #         api.clear
-    #         if input_third == "No" || input_third == "no"
-    #             puts "I'm sorry I couldn't help you today."
-    #             check = false
-    #             break
-    #         else 
-    #             api.clear
-    #         end
-    #     elsif input_second == "Yes" || input_second == "yes"
-    #         puts "Which recipe would you like the link for?"
-    #         input_fourth = gets.chomp
-    #         api.urls_and_names(input_fourth)
-    #         break
-    #     else
-    #         check = true
-    #     
 end 
 
 
-#binding pry 

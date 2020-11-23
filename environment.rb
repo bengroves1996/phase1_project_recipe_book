@@ -3,6 +3,7 @@
 require "pry"
 require "httparty"
 require "json"
+require "dotenv/load"
 
 #Required Files
 

@@ -32,8 +32,4 @@ class Recipe_list
     end 
 
 
-    
-
-
-
 end
