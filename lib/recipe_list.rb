@@ -18,7 +18,6 @@ class Recipe_list
 
     def self.display_recipes
         puts "Here's a list of recipes that will contain your ingredients!"
-
         value = self.all.each_with_index{|recipe,index| puts "#{index+1}. #{recipe.title}"}
         if value == []
             puts "value is empty"

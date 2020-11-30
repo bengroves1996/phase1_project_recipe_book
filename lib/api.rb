@@ -16,13 +16,9 @@ class Api
         uri = URI(url)
         reply =  Net::HTTP.get(uri)
         recipes = JSON.parse(reply)
-        list = recipes["recipes"][1..3] 
-
+        list = recipes["recipes"][1..3] #return an array of objects no an array of hashes
+        list.map{|recipe|Recipe_list.new(recipe["title"],recipe["sourceUrl"])}
     end 
-
-    def create_recipes
-        self.fetch_recipes{|recipe|Recipe_list.new(recipe["title"],recipe["sourceUrl"])}
-    end
 end 
 
 
